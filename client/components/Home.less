@@ -1,0 +1,19 @@
+.Home{
+
+	width: 200px;
+	transition: 1s;
+
+	&--blinked{
+		animation: blink .5s infinite alternate linear;
+	}
+}
+
+@keyframes blink{
+	from {
+		box-shadow: 0px 0px 0px 0px transparent;
+	}
+
+	to{
+		box-shadow: 2px 2px 50px 1px gold;
+	}
+}
