@@ -110,12 +110,10 @@ function findArrayAndObject(str){
 	
 	function getStructureRecursive(str, parentType, lvl){
 		var tempValue = 'A_'
-
-
-		//l(str)
-		
 		var regExp = new RegExp(`${startEndLvlSymbol}([${arrayLvlSymbol}|${objectLvlSymbol}])(\\d+)${groupOpen}${startEndLvlSymbol}(.*?)${startEndLvlSymbol}\\1\\2${groupClose}${startEndLvlSymbol}`)
 		var regExpGlobal = new RegExp(`${startEndLvlSymbol}([${arrayLvlSymbol}|${objectLvlSymbol}])(\\d+)${groupOpen}${startEndLvlSymbol}(.*?)${startEndLvlSymbol}\\1\\2${groupClose}${startEndLvlSymbol}`, 'g')
+		
+		//l(str)
 		
 		// find all matches
 		var matchesGlobal = str.match(regExpGlobal)
